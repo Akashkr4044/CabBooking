@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php 
 include '../config.php';
 include '../classes/ride.php';
@@ -28,4 +30,4 @@ if(!($_SESSION['check'])){
         <?php endforeach ?>
     </table>
 </div>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>

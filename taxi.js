@@ -1,15 +1,4 @@
-function myFunction() {
-    $(".result").addClass("invisible");
-    $(".result").removeClass("mb-3 mt-3");
-    var value = $("#cabType").val();
-    //alert("Changed :"+value);
-    if (value == "CedMicro") {
-        $("#luggage").prop("disabled", true);
-    }
-    else {
-        $("#luggage").prop("disabled", false);
-    }
-}
+
 $(document).ready(function() 
 {
     $(".nosamelocation").change(function() 
@@ -43,7 +32,7 @@ function myFunction2() {
     }
     if (cabType != "CedMicro") {
         if (!luggage) {
-            alert("Please inputweight of luggage(if any)");
+            alert("Please input weight of luggage(if any)");
             return false;
         }
     }
@@ -72,3 +61,10 @@ function myFunction2() {
         }
     });
 }
+
+function onlynumber(button) { 
+	var code = button.which;
+    if (code > 31 && (code < 48 || code > 57)) 
+        return false; 
+    return true; 
+} 

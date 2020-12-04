@@ -131,6 +131,13 @@ class ride{
 		return $result;
 	}
 
+	public function showCompletedRides2($id,$con)
+	{
+		$query = "SELECT * FROM `tbl_ride` WHERE `status`='2' && `customer_user_id`=$id";
+		$result = mysqli_query($con, $query);
+		return $result;
+	}
+
 	public function showCancelledRides($con)
 	{
 		$query = "SELECT * FROM `tbl_ride` WHERE `status`='0'";

@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php 
 session_start();
 include '../config.php';
@@ -28,4 +30,4 @@ if(!($_SESSION['check'])){
     </table>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>

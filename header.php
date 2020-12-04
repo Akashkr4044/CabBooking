@@ -150,7 +150,7 @@
 <div style="padding:0px;">
   <ul style="margin:0px; " >
     <?php if(isset($_SESSION['login']) && isset($_SESSION['name'])){ ?>
-      <li class="welcome">Welcome-<b>"<?php echo $_SESSION['login']; ?>"</b></li>
+    <li class="welcome">Welcome-<b>"<?php echo $_SESSION['login']; ?>"</b></li>
     <li><a href="dashboard.php">Home</a></li>
     <li><a href="index.php">Book Cab</a></li>
 
@@ -172,10 +172,11 @@
     <?php } if(isset($_SESSION['login'])){ ?>
     <li><a href="logout.php">Logout</a></li>
     <?php }else{ ?>
-      <li><a href="index.php">Book Cab</a></li>
-      <li><a class="active" href="login.php">Log In</a></li>
-      <li><a href="signup.php">Sign Up</a></li>
-    <?php } ?><!-- <h1 class="center" style="color:white; margin:0px; padding: 280px 0px;">PLEASE GO TO "BOOK CAB" SECTION TO BOOK A CAB !!</h1> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <li><a href="index.php">Book Cab</a></li> 
+        <li><a class="active" href="login.php">Log In</a></li> 
+        <li><a href="signup.php">Sign Up</a></li> 
+    <?php } ?>
   </ul>
 </div>
 

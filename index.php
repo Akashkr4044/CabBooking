@@ -1,3 +1,5 @@
+<?php include 'header1.php';?>
+
 <?php 
 session_start();
 require 'header.php'; 
@@ -20,12 +22,26 @@ $loc = $location->showLocation($con);
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="taxi.js"></script>
+    <script>
+        function myFunction() {
+            $(".result").addClass("invisible");
+            $(".result").removeClass("mb-3 mt-3");
+            var value = $("#cabType").val();
+
+            
+            if (value == "CedMicro") {
+                $("#luggage").attr("disabled", true);
+                $("#luggage").val("Luggage facility is not available for CedMicro");
+            }
+            else {
+                $("#luggage").attr("disabled", false);
+                $("#luggage").val("");
+            }
+        }
+    </script>
     <link rel="stylesheet" href="css/styleCab.css">
 </head>
 <body>
-    <header class="pt-1 pb-1">
-        <h1 style="padding-top:20px; color: rgb(220, 236, 80);">Ced<span style="background-color:red">Cab</span></h1>
-    </header>
     <div class="container-fluid">
         <div class="text-center pt-5 pb-2 top">
             <h1>Book a City Taxi to your destination in town</h1>
@@ -92,12 +108,10 @@ $loc = $location->showLocation($con);
                         </div>
                         <input type="input" id="total" class="form-control bg-grey" placeholder="(In Rs.)" disabled>
                     </div>
-                    <button id="submit" class="btn" onclick="myFunction2()"><b>Calculate Fare</b></button>
+                    <button id="submit" style="background-color: rgb(220, 236, 80); width: 100%;" class="btn" onclick="myFunction2()"><b>Calculate Fare</b></button>
             </div>
         </div>
     </div>
-    <footer class="pt-3 pb-3 text-center">
-        <p class="m-0"> Copyright @<strong>CedCab </strong>All rights reserved. </p>
-    </footer>
+    <?php include 'footer.php';?>
 </body>
 </html>

@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php 
 session_start();
 $addLocation = "";
@@ -34,7 +36,7 @@ if(!($_SESSION['check'])){
 <div class="center">
   <form action="" method="POST">
     <label for="lname"><b>Location Name : </b></label>
-    <input type="text" name="locationName" placeholder="Input location name..!"><br>
+    <input type="text" pattern="[a-zA-Z_]+([a-zA-Z]+){1,20}" title="Only letters are accepted" name="locationName" placeholder="Input location name..!" required><br>
 
     <label for="distance"><b>Distance : </b></label>
     <input type="number" name="distance" placeholder="Distance from Charbagh..!" maxlength="4"><br>
@@ -42,4 +44,4 @@ if(!($_SESSION['check'])){
     <input type="submit" name="submit" value="Submit">
   </form>
 </div>
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>

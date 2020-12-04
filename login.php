@@ -1,3 +1,5 @@
+<?php include 'header1.php';?>
+
 <?php
 session_start();
 if (isset($_SESSION['login'])){   //&& $_SESSION['isblock']=='1'
@@ -15,6 +17,7 @@ if(isset($_POST['submit'])){
   $con = $dbconn->connect();
 
   $username = $_POST['username'];
+  $username=strtolower($username);
   $password = $_POST['password'];
 
   $user = new user();
@@ -23,7 +26,6 @@ if(isset($_POST['submit'])){
 ?>
 
 <?php include 'header.php';?>
-
 <div class="main">
   <h1 class="heading">LOGIN PANEL</h1>
   <div>
@@ -45,9 +47,10 @@ if(isset($_POST['submit'])){
           <td></td>
           <td><input type="checkbox" id="check" name="check" value="check"><b>Remember Me</b></td>
         </tr>
+        <br>
         <tr>
-        <td>
-          <td><input class="submit2" name="submit" type="submit" value="Login">
+          <td>
+            <td><input class="submit2" name="submit" type="submit" value="Login">
           </td>
         </tr>
       </table>
@@ -55,5 +58,6 @@ if(isset($_POST['submit'])){
     <br/>
   </div>
 </div>
+<br><br>
 
 <?php include 'footer.php';?>

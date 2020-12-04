@@ -1,3 +1,5 @@
+<?php include 'header1.php';?>
+
 <?php 
     session_start();
     include 'config.php';
@@ -21,11 +23,11 @@ if(isset($_POST['submit'])){
   
   $id = $_SESSION['login'];
   $name = $_POST['name'];
-  $mobile = $_POST['mobile'];
+  $mobile = $_POST['mobileNum'];
   
   $user = new user();
   $error = $user->updateDetails($id,$name,$mobile,$con);
-  header('location: updateProfile.php');
+  // header('location: login.php');
 }
 ?>
 
@@ -75,14 +77,22 @@ div {
       <input type="text" value="<?php echo $user1['user_name']; ?>" name="username" disabled><br/>
 
       <label for="lname">NAME</label>
-      <input type="text" value="<?php echo $user1['name']; ?>" name="name"><br/>
+      <input type="text" onkeypress="return alphaonly(event)" value="<?php echo $user1['name']; ?>" name="name" required><br/>
       
-      <label for="lname">MOBILE</label>
-      <input type="text" value="<?php echo $user1['mobile']; ?>" name="mobile" maxlength="10"><br/>
+      <label for="mobileNum" onkeypress="return onlynum(event)">MOBILE</label>
+      <input type="number" class="text" value="<?php echo $user1['mobile']; ?>" name="mobileNum" maxlength="10" required><br/>
     
       <input type="submit" name = "submit" value="Submit">
     </form>
   </div>
 </div>
-
+<script>
+  function alphaonly(button) {
+    console.log(button.which);
+    var code = button.which;
+    if ((code > 64 && code < 91) || (code < 123 && code > 96)|| (code==08))
+        return true;
+    return false;
+    }
+</script>
 <?php include 'footer.php';?>

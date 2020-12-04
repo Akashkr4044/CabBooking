@@ -27,6 +27,11 @@ class location{
 		$query = "DELETE FROM `tbl_location` WHERE `id`=$id";
 		mysqli_query($con, $query);
 	}
-}
 
+	public function toggleLocation($id,$con)
+	{
+		$id = $_GET['id'];
+		echo $id;
+	}
+}
 ?>

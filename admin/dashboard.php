@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php
   session_start();
 
@@ -67,18 +69,20 @@
   }
 ?>
 
-<div class="container" style="margin-top:50px; margin-bottom:50px;">
-  <div class="first"><h1 style="padding-top:30px;">Number of Pending Users</h1><h2><?php echo $puCount;?></h2></div>
-  <div class="third"><h1 style="padding-top:30px;">Number of Approved Users</h1><h2><?php echo $buCount;?></h2></div>
-  <div class="second"><h1 style="padding-top:30px;">Total number of Users</h1><h2><?php echo $auCount;?></h2></div>
-  <div class="fourth"><h1 style="padding-top:30px;">Number of Pending Rides</h1><h2><?php echo $prCount;?></h2></div>
-  <div class="fifth"><h1 style="padding-top:30px;">Number of Completed Rides</h1><h2><?php echo $crCount;?></h2></div>
-  <div class="sixth"><h1 style="padding-top:30px;">Number of Cancelled Rides</h1><h2><?php echo $c2rCount;?></h2></div>
-  <div class="seventh"><h1 style="padding-top:30px;">Total number of Rides</h1><h2><?php echo $arCount;?></h2></div>
-  <div class="eighth"><h1 style="padding-top:30px;">Total Expected Fare</h1><h2>₹ <?php echo $totalFARE;?></h2></div>
-  <div class="first"><h1 style="padding-top:30px;">Total Locations</h1><h2><?php echo $tlCount;?></h2></div>
+<section style="margin-top:50px; margin-bottom:50px; margin-left:100px;">
+  <div class="first" style="margin:15px;"><h1 style="padding-top:30px;">Number of Pending Users</h1><h2><?php echo $puCount;?></h2></div>
+  <div class="third" style="margin:15px;"><h1 style="padding-top:30px;">Number of Approved Users</h1><h2><?php echo $buCount;?></h2></div>
+  <div class="second" style="margin:15px;"><h1 style="padding-top:30px;">Total number of Users</h1><h2><?php echo $auCount;?></h2></div>
+  <div class="fourth" style="margin:15px;"><h1 style="padding-top:30px;">Number of Pending Rides</h1><h2><?php echo $prCount;?></h2></div>
+  <div class="fifth" style="margin:15px;"><h1 style="padding-top:30px;">Number of Completed Rides</h1><h2><?php echo $crCount;?></h2></div>
+  <div class="sixth" style="margin:15px;"><h1 style="padding-top:30px;">Number of Cancelled Rides</h1><h2><?php echo $c2rCount;?></h2></div>
+  <div class="seventh" style="margin:15px;"><h1 style="padding-top:30px;">Total number of Rides</h1><h2><?php echo $arCount;?></h2></div>
+  <div class="eighth" style="margin:15px;"><h1 style="padding-top:30px;">Total Expected Fare</h1><h2>₹ <?php echo $totalFARE;?></h2></div>
+  <div class="first" style="margin:15px;"><h1 style="padding-top:30px;">Total Locations</h1><h2><?php echo $tlCount;?></h2></div>
   <!-- <div class="third"><h1 style="padding-top:30px;">Currently Unavailable</h1><h2><?php //echo $;?></h2></div>
   <div class="second"><h1 style="padding-top:30px;">Currently Unavailable</h1><h2><?php //echo $;?></h2></div>
   <div class="fourth"><h1 style="padding-top:30px;">Currently Unavailable</h1><h2><?php //echo $;?></h2></div> -->
-</div>
-<?php include 'footer.php'; ?>​
+</section>
+
+
+​

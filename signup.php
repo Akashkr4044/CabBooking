@@ -1,3 +1,5 @@
+<?php include 'header1.php';?>
+
 <?php
 $error = "";
 
@@ -11,6 +13,7 @@ if (isset($_POST['submit']))
 
 	$name = $_POST['name'];
 	$username = $_POST['username'];
+	$username=strtolower($username);
 	$password = $_POST['password'];
 	$repassword = $_POST['rePassword'];
 	$mobileNum = $_POST['mobileNum'];
@@ -24,46 +27,16 @@ if (isset($_POST['submit']))
 ?>
 
 <?php include "header.php"; ?>
-
 <div class="main">
 	<h1 class="heading">USER REGISTRATION PANEL</h1>
 		<div>
 			<p style="color:black;"><?php echo "<b>".$error."</b>" ?></p>
 		</div>
 	<div id="div">
-		<!-- <form action="" method="POST">
-			<table class="center" style="padding-top: 50px;">
-				<tr>
-					<td>Name :</td>
-					<td><input type="text" name="name" placeholder="Enter your Name" required></td>
-				</tr>
-				<tr>
-					<td>Username :</td>
-					<td><input type="text" name="username" placeholder="Enter your Username" required></td>
-				</tr>
-				<tr>
-					<td>Password :</td>
-					<td><input type="password" name="password" placeholder="Enter your Password" required></td>
-				</tr>
-				<tr>
-					<td>Re-enter Password :</td>
-					<td><input type="password" name="rePassword" placeholder="Confirm your Password" required></td>
-				</tr>
-				<tr>
-					<td>Mobile No :</td>
-					<td><input name="mobileNum" type="text" placeholder="Enter your Mobile Number" maxlength="10" required></td>
-				</tr>
-				<tr>
-					<td></td>
-					<td><input class="submit" type="submit" name="submit" value="Register">
-					</td>
-				</tr>
-			</table>
-		</form> -->
 
 		<form action="" method="POST">
 			<label for="name"><b>Name</b></label>
-			<input type="text" class="text" name="name" placeholder="Your name..." require><br/>
+			<input type="text" class="text" placeholder="Your name..." onkeypress="return alphaonly(event)" name="name" placeholder="Your name..." required><br/>
 
 			<label for="user_name"><b>User Name</b></label>
 			<input type="text" class="text" name="username" placeholder="Your user name..." require>
@@ -76,12 +49,21 @@ if (isset($_POST['submit']))
 			<input type="password" class="password" name="rePassword" placeholder="Confirm your Password..." require>
 			
 			
-			<label for="mobileNum"><b>Mobile No.</b></label>
-			<input type="text" class="text" name="mobileNum" placeholder="Your mobile number..." maxlength="10" require>
+			<label for="mobileNum" onkeypress="return onlynum(event)"><b>Mobile No.</b></label>
+			<input type="number" class="text" name="mobileNum" placeholder="Your mobile number..." maxlength="10" required>
 		
 			<input type="submit" class="submit2" name="submit" value="Register">
   		</form>
 		<br/>
 	</div>
 </div>
+<script>
+  function alphaonly(button) {
+    console.log(button.which);
+    var code = button.which;
+    if ((code > 64 && code < 91) || (code < 123 && code > 96)|| (code==08))
+        return true;
+    return false;
+    }
+</script>
 <?php include 'footer.php'; ?>

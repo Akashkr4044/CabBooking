@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php
 
 session_start();
@@ -88,5 +90,5 @@ if(isset($_POST['submit'])){
   </div>
 </div>
 
-<?php include 'footer.php';?>
+<?php include '../footer.php'; ?>
 

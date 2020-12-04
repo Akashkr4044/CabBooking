@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php 
 $value= "";
 if(isset($_POST['select']))
@@ -43,4 +45,4 @@ if(!($_SESSION['check'])){
     </table>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>

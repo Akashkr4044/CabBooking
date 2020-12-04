@@ -1,3 +1,5 @@
+<?php include '../header1.php'; ?>
+
 <?php 
 include '../config.php';
 include '../classes/location.php';
@@ -29,10 +31,19 @@ if(!($_SESSION['check'])){
 <div class="pending">
     <h1 class="center">LOCATIONS -</h1>
     <table class="adminTable"><?php $i=0;?>
-    <th>Sr. No.</th><th>LOCATION NAME</th><th>DISTANCE</th><th>AVAILABILITY</th><th></th><th></th>
+    <th>Sr. No.</th><th>LOCATION NAME</th><th>DISTANCE</th><th>AVAILABILITY</th><th></th><th></th><th></th>
         <?php foreach($showLocations as $key=>$value): ?>
             <tr>   
-            <td><?php echo ++$i;?></td><td><?php echo $value['name'];?></td><td><?php echo $value['distance'];?></td><td><?php echo $value['is_available'];?></td><td><input id="ride-<?php echo $value['id'];?>" type="button" value="EDIT" onclick="edit(<?php echo $value['id']; ?>,'<?php echo $value['name'];?>',<?php echo $value['distance'];?>)"></td><td><input id="allow-<?php echo $value['id'];?>" type="button" value="DELETE" onclick="deletee(<?php echo $value['id'];?>)"></td>
+              <td><?php echo ++$i;?></td>
+              <td><?php echo $value['name'];?></td>
+              <td><?php echo $value['distance'];?></td>
+              <td><?php echo $value['is_available'];?></td>
+
+              <td><input id="ride-<?php echo $value['id'];?>" type="button" value="EDIT" onclick="edit(<?php echo $value['id']; ?>,'<?php echo $value['name'];?>',<?php echo $value['distance'];?>)"></td>
+
+              <td><input id="allow-<?php echo $value['id'];?>" type="button" value="DELETE" onclick="deletee(<?php echo $value['id'];?>)"></td>
+
+              <td><input href="showLocations.php?id=<?php echo $value['id'] ?>" type="button" value="TOGGLE" onclick="toggle(<?php echo $value['id'];?>)"></td>
             </tr>
         <?php endforeach; ?>
     </table>
@@ -51,4 +62,4 @@ if(!($_SESSION['check'])){
   </form>
 </div>
 
-<?php include 'footer.php'; ?>
+<?php include '../footer.php'; ?>

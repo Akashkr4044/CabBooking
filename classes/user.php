@@ -86,10 +86,10 @@ class user{
 
 	public function updateDetails($id,$name,$mobile,$con)
 	{	
-		$query = "UPDATE `tbl_user` SET `name`='".$name."',  `mobile`='".$mobile."' WHERE `user_name`='".$id."'";    
+		$query = "UPDATE `tbl_user` SET `name`='".$name."', `mobile`='".$mobile."' WHERE `user_name`='".$id."'";    
         $result = mysqli_query($con, $query);
         $success = "PROFILE UPDATED SUCCESSFULLY...!!";
-        return $success;
+		return $success;
 	}
 
 	public function updatePass($id,$oldPassword,$newPassword,$con)
@@ -106,8 +106,7 @@ class user{
 		$query2 = "UPDATE `tbl_user` SET `password`='".$newPassword."' WHERE `user_id`='".$id."'";    
 		$result2 = mysqli_query($con, $query2);
 		
-        $success = "PASSWORD UPDATED SUCCESSFULLY...!!";
-		return $success;
+        header("location: logout.php");
 		}
 		else return "YOUR OLD PASSWORD IS INCORRECT !!";
 	}
