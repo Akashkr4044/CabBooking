@@ -36,6 +36,14 @@ if(isset($_POST['submit'])){
 
 <!DOCTYPE html>
 <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<title>
+Update Password
+</title>
+<!-- <link rel="stylesheet" href="cab.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
     input[type=password], select {
     width: 100%;
@@ -67,6 +75,7 @@ if(isset($_POST['submit'])){
     padding: 20px;
     }
 </style>
+</head>
 <body>
 
 <div class="main">
@@ -77,18 +86,24 @@ if(isset($_POST['submit'])){
   <div>
   <form action="" method="POST" novalidate>
       <label for="oldPass">OLD PASSWORD</label>
-      <input type="password" value="" name="oldPassword" placeholder="Enter your Old Password"><br/>
+      <input type="password" value="" class="form" name="oldPassword" placeholder="Enter your Old Password"><br/>
       
       <label for="newPass">NEW PASSWORD</label>
-      <input type="password" value="" name="newPassword" placeholder="Enter your New Password"><br/>
+      <input type="password" value="" class="form" name="newPassword" placeholder="Enter your New Password"><br/>
 
       <label for="reNewPass">RE-ENTER NEW PASSWORD</label>
-      <input type="password" value="" name="reNewPassword" placeholder="Re-enter your New Password"><br/>
+      <input type="password" value="" class="form" name="reNewPassword" placeholder="Re-enter your New Password"><br/>
     
       <input type="submit" name = "submit" value="Submit">
     </form>
   </div>
 </div>
+<script>
+	$('.form').on("cut copy paste drag drop",function(e) {
+		e.preventDefault();
+	});
+</script>
 
 <?php include 'footer.php'; ?>
+</body>
 

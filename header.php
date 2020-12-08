@@ -150,7 +150,12 @@
 <div style="padding:0px;">
   <ul style="margin:0px; " >
     <?php if(isset($_SESSION['login']) && isset($_SESSION['name'])){ ?>
-    <li class="welcome">Welcome-<b>"<?php echo $_SESSION['login']; ?>"</b></li>
+    <li class="welcome" style="float:right">Welcome-<b>"<?php echo $_SESSION['login']; ?>"</b></li>
+    <li>
+          <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <h1 style="padding: 10px; font-weight:500; margin-bottom:0; line-height:1.2; font-size: 2rem; color:rgb(220, 236, 80); background-color: #2c2c2e; margin-top:0; text-decoration:none; font-family: Sofia">Ced<span style="background-color:red; border-radius: 48px;">Cab</span> </h1>
+    </li>
     <li><a href="dashboard.php">Home</a></li>
     <li><a href="index.php">Book Cab</a></li>
 
@@ -173,6 +178,11 @@
     <li><a href="logout.php">Logout</a></li>
     <?php }else{ ?>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <li>
+          <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <h1 style="padding: 10px; font-weight:500; margin-bottom:0; line-height:1.2; font-size: 2rem; color:rgb(220, 236, 80); background-color: #2c2c2e; margin-top:0; text-decoration:none; font-family: Sofia">Ced<span style="background-color:red; border-radius: 48px;">Cab</span> </h1>
+        </li>
         <li><a href="index.php">Book Cab</a></li> 
         <li><a class="active" href="login.php">Log In</a></li> 
         <li><a href="signup.php">Sign Up</a></li> 

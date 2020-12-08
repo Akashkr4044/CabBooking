@@ -30,8 +30,8 @@ class location{
 
 	public function toggleLocation($id,$con)
 	{
-		$id = $_GET['id'];
-		echo $id;
+		$query = "UPDATE FROM `tbl_location` SET `is_available`=($is_available ^ 1)";
+		mysqli_query($con, $query);
 	}
 }
 ?>

@@ -1,4 +1,3 @@
-<?php include 'header1.php';?>
 
 <?php 
 session_start(); 
@@ -15,16 +14,16 @@ $pendingRides = $ride->showCompletedRides2($id,$con);
 ?>
 
 <?php 
+include 'header.php';
 if(!($_SESSION['user_id'])){
     header('location: login.php');
 }
 ?>
 
 <html>
-
 	<head>
-	<title>Invoice</title>
-	<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+		<title>Invoice</title>
+		<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
 		<style type="text/css">
 		body {		
 			font-family: Sofia;
@@ -90,6 +89,7 @@ if(!($_SESSION['user_id'])){
 	</head>
 
 	<body>
+	<center>
 	<div class="invoice">
 		<div class="company-address" ><center>
 			CedCab Ltd
@@ -102,7 +102,9 @@ if(!($_SESSION['user_id'])){
 	
 		<div class="invoice-details">
 			<center>
-			<h1>Ced<span style="background-color: red">Cab</span></h1>
+			<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+          	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          	<h1 style="padding: 10px; font-weight:500; margin-bottom:0; line-height:1.2; font-size: 2rem; color:rgb(220, 236, 80); margin-top:0; text-decoration:none; font-family: Sofia">Ced<span style="background-color:red; border-radius: 48px;">Cab</span> </h1>
 			</center>
 		</div>
 		
@@ -148,6 +150,7 @@ if(!($_SESSION['user_id'])){
         		<?php endforeach ?>
 			</table>
 		</div>
+		</center>
 	</body>
 </html>
 

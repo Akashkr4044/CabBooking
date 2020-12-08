@@ -1,4 +1,4 @@
-<?php include 'header1.php';?>
+
 
 <?php
 session_start();
@@ -11,7 +11,7 @@ include 'header.php';
 
 <div style="background-color:grey; height:100%; width:100%;" >
 <h1 class="center" style="color:white; margin:0px;"><img src="logos.png" alt="customerlogo"></h1>
-
+<br>
 </div>
 
 <?php include 'footer.php'; ?>

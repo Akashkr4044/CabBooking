@@ -1,4 +1,4 @@
-<?php include 'header1.php';?>
+
 
 <?php 
     session_start();
@@ -33,6 +33,14 @@ if(isset($_POST['submit'])){
 
 <!DOCTYPE html>
 <html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<title>
+Login
+</title>
+<!-- <link rel="stylesheet" href="cab.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <style>
 input[type=text], select {
   width: 100%;
@@ -64,6 +72,7 @@ div {
   padding: 20px;
 }
 </style>
+</head>
 <body>
 
 <div class="main">
@@ -77,10 +86,10 @@ div {
       <input type="text" value="<?php echo $user1['user_name']; ?>" name="username" disabled><br/>
 
       <label for="lname">NAME</label>
-      <input type="text" onkeypress="return alphaonly(event)" value="<?php echo $user1['name']; ?>" name="name" required><br/>
+      <input type="text" class="form" onkeypress="return alphaonly(event)" value="<?php echo $user1['name']; ?>" name="name" required><br/>
       
       <label for="mobileNum" onkeypress="return onlynum(event)">MOBILE</label>
-      <input type="number" class="text" value="<?php echo $user1['mobile']; ?>" name="mobileNum" maxlength="10" required><br/>
+      <input type="number" class="text form" value="<?php echo $user1['mobile']; ?>" name="mobileNum" maxlength="10" required><br/>
     
       <input type="submit" name = "submit" value="Submit">
     </form>
@@ -94,5 +103,10 @@ div {
         return true;
     return false;
     }
+
+  $('.form').on("cut copy paste drag drop",function(e) {
+    e.preventDefault();
+	});
 </script>
 <?php include 'footer.php';?>
+</body>

@@ -1,4 +1,4 @@
-<?php include '../header1.php'; ?>
+
 
 <?php 
 include '../config.php';
@@ -33,8 +33,8 @@ if(!($_SESSION['check'])){
             <td><?php echo $key['luggage']?></td>
             <td><?php echo $key['total_fare']?></td>
             <td><?php echo $key['customer_user_id']?></td>
-            <td><input class="btn" id="allow-<?php echo $key['user_id']?>" type="button" value="APPROVE" onclick="myFunction1(<?php echo $key['ride_id']?>)"></td>
-            <td><input class="btn" id="allow-<?php echo $key['ride_id']?>" type="button" value="CANCEL" onclick="myFunction2(<?php echo $key['ride_id']?>)"></td>
+            <td><input class="btn" style=" color: white; background-color: black; border-radius: 50%; padding: 10px;" id="allow-<?php echo $key['user_id']?>" type="button" value="APPROVE" onclick="myFunction1(<?php echo $key['ride_id']?>)"></td>
+            <td><input class="btn" style=" color: white; background-color: black; border-radius: 50%; padding: 10px;" id="allow-<?php echo $key['ride_id']?>" type="button" value="CANCEL" onclick="myFunction2(<?php echo $key['ride_id']?>)"></td>
             </tr>
         <?php endforeach ?>
     </table>

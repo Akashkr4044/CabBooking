@@ -76,7 +76,12 @@
 
 <body>
 <div style="padding: 0px;">
-  <ul style="padding: 20px;">
+  <ul>
+    <li>
+          <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <h1 style="padding: 10px; font-weight:500; margin-bottom:0; line-height:1.2; font-size: 2rem; color:rgb(220, 236, 80); background-color: #2c2c2e; margin-top:0; text-decoration:none; font-family: Sofia">Ced<span style="background-color:red; border-radius: 48px;">Cab</span> </h1>
+    </li>
     <li><a href="dashboard.php">Home</a></li>
     <li class="dropdown1">
       <a href="javascript:void(0)" class="dropbtn1">Rides&#x21B4;</a>

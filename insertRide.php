@@ -21,6 +21,6 @@ if(isset($_SESSION['user_id']))
     echo $result;
 }
 else {
-    echo "PLEASE LOG IN FIRST..!";
+    echo 0;
 }
 ?>

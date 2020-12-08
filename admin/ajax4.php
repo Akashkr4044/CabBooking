@@ -1,9 +1,9 @@
 <?
-    $id = $_POST['id'];
+    $is_available = $_POST['is_available'];
     include '../classes/location.php';
     include '../config.php';
     $dbconn = new DBConnection(); 
     $con = $dbconn->connect();
     $loc = new location();
-    $loc->toggleLocation($id,$con);
+    $loc->toggleLocation($is_available,$con);
 ?>

@@ -41,25 +41,37 @@ function myFunction2() {
         url: 'calcfare.php',
         data: { pickup: pickup, destination: destination, cabtype: cabType, luggage: luggage },
         success: function(response) {
-            // $(".result").removeClass("invisible");
-            // $(".result").addClass("mb-3 mt-3");
-            // $("#total").val("₹"+response);
-            alert("TOTAL FARE (in ₹):"+response);
-            var r = confirm("WANT TO CONFIRM BOOKING ??");
-            if (r == true) {
-                $.ajax({
-                    method: 'POST',
-                    url: 'insertRide.php',
-                    data: { pickup: pickup, destination: destination, luggage: luggage, total_fare: response},
-                    success: function(result) {
-                        alert(result);
-                    }
-                });
-              } else {
-                alert("BOOKING CANCELLED...!!");
-              }
+        // $(".result").removeClass("invisible");
+        // $(".result").addClass("mb-3 mt-3");
+        // $("#total").val("₹"+response);
+        if(response==1){
+        alert("YOU ALREADY HAVE 1 RIDE IN PENDING !!");
         }
-    });
+        else{
+        alert("TOTAL FARE (in ₹):"+response);
+        var r = confirm("WANT TO CONFIRM BOOKING ??");
+        if (r == true) {
+        $.ajax({
+        method: 'POST',
+        url: 'insertRide.php',
+        data: { pickup: pickup, destination: destination, luggage: luggage, total_fare: response},
+        success: function(result) {
+        if(result==0){
+        alert("PLEASE LOG IN FIRST..!!");
+        window.location.href = "login.php";
+        }
+        else{
+        alert(result);
+        location.reload();
+        }
+        }
+        });
+        } else {
+        alert("BOOKING CANCELLED...!!");
+        }
+        }
+        }
+        });
 }
 
 function onlynumber(button) { 

@@ -1,4 +1,4 @@
-<?php include 'header1.php';?>
+
 
 <?php
 session_start();
@@ -24,8 +24,19 @@ if(isset($_POST['submit'])){
   $error = $user->login($username,$password,$con);
 }
 ?>
-
 <?php include 'header.php';?>
+
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<title>
+Login
+</title>
+<!-- <link rel="stylesheet" href="cab.css"> -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+</head>
+<body>
 <div class="main">
   <h1 class="heading">LOGIN PANEL</h1>
   <div>
@@ -36,11 +47,11 @@ if(isset($_POST['submit'])){
       <table class="center" style="padding-top:50px;">
         <tr>
           <td><b>Username : </b></td>
-          <td><input class="text" name="username"type="text" required="" placeholder="Enter your Username"></td>
+          <td><input class="text form" name="username" type="text" required="" placeholder="Enter your Username"></td>
         </tr>
         <tr>
           <td><b>Password : </b></td>
-          <td><input class="password" name="password" type="password" required="" placeholder="Enter your Password"></td>
+          <td><input class="password form" name="password" type="password" required="" placeholder="Enter your Password"></td>
         </tr>
         <tr></tr><tr></tr><tr></tr><tr></tr>
         <tr> 
@@ -58,6 +69,13 @@ if(isset($_POST['submit'])){
     <br/>
   </div>
 </div>
+<br><br><br>
 <br><br>
+<script>
+	$('.form').on("cut copy paste drag drop",function(e) {
+		e.preventDefault();
+	});
+</script>
 
 <?php include 'footer.php';?>
+</body>

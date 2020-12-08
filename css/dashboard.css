@@ -1,72 +1,64 @@
-/* div{
-    text-align: center;
-} */
-
-.container{
-    padding: 0px 30px;
-}
-
 .first {
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);  
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);  
 }
 
 .second{
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%); 
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);
 }
 
 
 .third{
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,17,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);
 }
 
 .fourth {
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,17,1) 35%, rgba(0,212,255,1) 100%); 
+    background: rgb(238,174,202);
+background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%); 
 }
 
 .fifth{
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,17,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);
 }
 
 .sixth{
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);
 }
 
 .seventh{
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,17,1) 35%, rgba(0,212,255,1) 100%);
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);
 }
 
 .eighth{
     float: left;
-    width: 280px;
+    width: 300px;
     height: 230px;
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    background: rgb(238,174,202);
+    background: linear-gradient(4deg, rgba(238,174,202,1) 0%, rgba(77,120,170,1) 100%);
 }
